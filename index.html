@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bird{
+            width: 280px;
+            height: 277px;
+            background-image: url("images/i.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            animation-name: fly;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-timing-function: steps(7);
+
+            
+        }
+        .birdcontainer{
+            position: relative;
+            animation-name: flybird;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+        }
+        @keyframes fly{
+            0%{
+                background-position: 0px 0px;
+                left: 0%;
+            }
+            100%{
+                background-position: -1920px 0px;
+                left: 100%;
+            }
+        }
+        @keyframes flybird {
+         from{
+                left: 0%;
+         }  
+         to{
+                left: 100%;
+         } 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="birdcontainer">
+        <div class="bird"></div>
+    </div>
+</body>
+
+</html>
